@@ -8,7 +8,7 @@ export default function ApplicationCard({application}) {
             <p>{application.role}</p>
             <StatusBadge status={application.status}/>
             <p>Applied {formatDate(application.appliedOn)}</p>
-            <p>Source: {application.source}</p>
+            {application.source && <p>Source: {application.source}</p>}  
             {application.notes && <p>Notes: {application.notes}</p>}
             <a href={application.url}>View Job</a>
 
